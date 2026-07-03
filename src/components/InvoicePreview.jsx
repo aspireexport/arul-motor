@@ -1,4 +1,4 @@
-import "../styles/invoice.css";
+import "../styles/Invoice.css";
 import numberToWords from "../utils/numberToWords";
 import signature from "../assets/Signature.png";
 
