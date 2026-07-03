@@ -19,8 +19,8 @@ export default defineConfig({
         scope: "/arul-motor/",
         display: "standalone",
         background_color: "#ffffff",
-        theme_color: "#123d8d"
-      }
-    })
-  ]
+        theme_color: "#123d8d",
+      },
+    }),
+  ],
 });
