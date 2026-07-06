@@ -6,14 +6,14 @@ const generatePDF = () => {
   if (!element) return;
 
   const options = {
-    margin: 10,
+    margin: 5,
     filename: "Invoice.pdf",
     image: {
       type: "jpeg",
       quality: 1,
     },
     html2canvas: {
-      scale: 3,
+      scale: 2,
       useCORS: true,
       scrollY: 0,
     },
@@ -22,12 +22,12 @@ const generatePDF = () => {
       format: "a4",
       orientation: "portrait",
     },
-    pagebreak: {
-      mode: ["avoid-all", "css", "legacy"],
-    },
   };
 
-  html2pdf().set(options).from(element).save();
+  html2pdf()
+    .set(options)
+    .from(element)
+    .save();
 };
 
 export default generatePDF;
