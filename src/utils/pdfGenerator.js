@@ -7,11 +7,19 @@ const generatePDF = async () => {
     if (!invoice) return;
 
     const canvas = await html2canvas(invoice, {
-        scale: 3,
-        useCORS: true,
-        backgroundColor: "#ffffff",
-        scrollY: -window.scrollY,
-    });
+    scale: 3,
+    useCORS: true,
+    backgroundColor: "#ffffff",
+
+    windowWidth: invoice.scrollWidth,
+    windowHeight: invoice.scrollHeight,
+
+    width: invoice.scrollWidth,
+    height: invoice.scrollHeight,
+
+    scrollX: 0,
+    scrollY: 0,
+});
 
     const imgData = canvas.toDataURL("image/png");
 
