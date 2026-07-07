@@ -22,12 +22,12 @@ function InvoicePreview({ customer, items, total }) {
 
         <div>
           <p>
-            <b>Customer :</b>{" "}
+            <b>Name :</b>{" "}
             {customer.name || "_____________________"}
           </p>
 
           <p>
-            <b>Vehicle :</b>{" "}
+            <b>Vehicle No. :</b>{" "}
             {customer.vehicle || "_____________________"}
           </p>
         </div>

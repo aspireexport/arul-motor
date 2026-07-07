@@ -1,152 +1,140 @@
 .invoice {
     background: white;
-    width: 100%;
-    min-height: 900px;
+    width: 794px;
+    max-width: 794px;
+    min-height: 1123px;
     padding: 35px;
+    margin: 20px auto;
     border-radius: 12px;
     border: 2px solid #123d8d;
     box-shadow: 0 10px 25px rgba(0,0,0,.08);
+    box-sizing: border-box;
 }
 
-.invoiceHeader{
-    text-align:center;
-    border-bottom:2px solid #123d8d;
-    padding-bottom:18px;
-    margin-bottom:20px;
+.invoiceHeader {
+    text-align: center;
+    border-bottom: 2px solid #123d8d;
+    padding-bottom: 18px;
+    margin-bottom: 20px;
 }
 
-.invoiceHeader h1{
-    color:#123d8d;
-    font-size:42px;
-    margin-bottom:8px;
+.invoiceHeader h1 {
+    color: #123d8d;
+    font-size: 42px;
+    margin-bottom: 8px;
 }
 
-.invoiceHeader p{
-    color:#444;
-    font-size:15px;
-    line-height:1.6;
+.invoiceHeader p {
+    color: #444;
+    font-size: 15px;
+    line-height: 1.6;
 }
 
-.topDetails{
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:30px;
-
-    margin:25px 0;
-
+.topDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    margin: 25px 0;
 }
 
-.topDetails p{
-
-    font-size:16px;
-
-    margin:10px 0;
-
+.topDetails > div {
+    width: 48%;
 }
 
-.billTable{
-
-    width:100%;
-
-    border-collapse:collapse;
-
-    margin-top:30px;
-
+.topDetails p {
+    font-size: 16px;
+    margin: 10px 0;
+    white-space: nowrap;
 }
 
-.billTable th{
-
-    background:#123d8d;
-
-    color:white;
-
-    padding:12px;
-
+.billTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
 }
 
-.billTable td{
-
-    border:1px solid #ccc;
-
-    padding:12px;
-
-    height:42px;
-
+.billTable th {
+    background: #123d8d;
+    color: white;
+    padding: 12px;
 }
 
-.totalSection{
-
-    margin-top:25px;
-
-    text-align:right;
-
+.billTable td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    height: 42px;
 }
 
-.totalSection h2{
-
-    color:#123d8d;
-
-    font-size:30px;
-
+.totalSection {
+    margin-top: 25px;
+    text-align: right;
 }
 
-.words{
+.totalSection h2 {
+    color: #123d8d;
+    font-size: 30px;
+}
 
-    margin-top:30px;
-
-    border-top:1px dashed #999;
-
-    padding-top:15px;
-
-    font-size:15px;
-
+.words {
+    margin-top: 30px;
+    border-top: 1px dashed #999;
+    padding-top: 15px;
+    font-size: 15px;
 }
 
 /* ================= SIGNATURE ================= */
 
-.signature{
-    width:100%;
-    margin-top:50px;
-
-    display:flex;
-    flex-direction:column;
-
-    align-items:flex-end;
+.signature {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
-.signatureImage{
-    width:120px;
-    display:block;
-    margin-right:40px;
-    margin-bottom:-5px;
+.signatureImage {
+    width: 120px;
+    display: block;
+    margin-right: 40px;
+    margin-bottom: -5px;
 }
 
-.signature p{
-    width:220px;
-    text-align:center;
-
-    margin:0;
-
-    color:#123d8d;
-    font-size:18px;
-    font-weight:600;
+.signature p {
+    width: 220px;
+    text-align: center;
+    margin: 0;
+    color: #123d8d;
+    font-size: 18px;
+    font-weight: 600;
 }
 
-.signature hr{
-    width:220px;
-    margin:6px 0;
-
-    border:none;
-    border-top:2px solid #123d8d;
+.signature hr {
+    width: 220px;
+    margin: 6px 0;
+    border: none;
+    border-top: 2px solid #123d8d;
 }
 
-.signature small{
-    width:220px;
-    text-align:center;
+.signature small {
+    width: 220px;
+    text-align: center;
+    color: #555;
+    font-size: 14px;
+}
 
-    color:#555;
-    font-size:14px;
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+
+    body {
+        overflow-x: auto;
+    }
+
+    .invoice {
+        width: 794px;
+        min-width: 794px;
+        margin: 20px;
+    }
+
 }
